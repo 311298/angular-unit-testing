@@ -50,7 +50,7 @@ it('show alert message', () => {
     expect(component.showMessage('hello')).toBe('hello');
 });
 
-inside the declaration we create a object of AppComponent like below --
+inside the describe we create a object of AppComponent like below --
 let component = new AppComponent()
 
 then, for test case we write it function inside it -- we call expect() 
@@ -80,3 +80,9 @@ there are 2 types of matcher in-built and custom matchers
 matcher are the js function that does a boolean comparision between actual output and expected output
 
 customer matcher need to be define explicitly
+
+8. toBe and toEqual
+
+for primitive data types we will use the toBe like in case of string, numbers, and boolean while toEqual used for everything else.
+
+generally( toEqual ) use it for object comparision

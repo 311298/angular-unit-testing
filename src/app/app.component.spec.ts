@@ -44,4 +44,18 @@ describe('AppComponent', () => {
   it('addition method', () => {
     expect(Addition(10, 20)).toBe(30);
   });
+
+  it('toBe and toEqual test cases', () => {
+    var a = 'hello';
+    var b = 'hello';
+    // expect(a).toBe(b);
+    expect(a).toEqual(b); // here it may be passing but generally use it for object comparision
+  });
+
+  it('toBe and toEqual test cases 2', () => {
+    var a = ['1'];
+    var b = ['1'];
+    // expect(a).toBe(b); // will not pass because of deep check
+    expect(a).toEqual(b);
+  });
 });
