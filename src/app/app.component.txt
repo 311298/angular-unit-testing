@@ -7,8 +7,29 @@ https://www.youtube.com/playlist?list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ
 
 1. introduction to jasmine and karma
 
-jasime is bdd(behavious driven development)
+jasmine is bdd(behavious driven development)
 it is tesing framework for angular for unit testing
 karma is open source automation testing tool
 
 2. flow of angular unit test case
+
+app.component.spec.ts -> file we write our test cases
+describe -- is the test suite for particular component
+it -- is the particular test case inside the component
+testBed and async
+jasmine give us the asynchronous functinality via async
+testBed is main utility inside the angular.
+beforeEach -- run before any block
+describe first runs -- beforeEach runs -- lastly it runs
+
+3. how to run the angular unit test cases
+
+describe -- tells the jasmine on which component unit testing will be performed
+beforeEach -- tells the jasmine to run give code before anything
+testBed -- setup the configuration and initialize the favourable condition for testing
+configureTestingModule -- setup the module that allows us to test our test case
+declaration -- component which is to tested and also the who dependency on component like child component
+provider -- override the actual servide using the spy
+imports -- are the api we used inside the component like formsmodule for ngmodel etc.
+ng test -- to run the test
+for particular folder ng test --include /path
