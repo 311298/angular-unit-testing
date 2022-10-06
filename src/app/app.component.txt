@@ -33,3 +33,39 @@ provider -- override the actual servide using the spy
 imports -- are the api we used inside the component like formsmodule for ngmodel etc.
 ng test -- to run the test
 for particular folder ng test --include /path
+
+4. jasmine and karma configuration
+
+karma -- helps to run test cases inside the chrome
+nothing important google search for few terms in karma.conf.js and test.ts
+
+5.
+inside the app.component.ts
+showMessage(message: string): string {
+    return message
+}
+
+inside the spec.ts
+it('show alert message', () => {
+    expect(component.showMessage('hello')).toBe('hello');
+});
+
+inside the declaration we create a object of AppComponent like below --
+let component = new AppComponent()
+
+then, for test case we write it function inside it -- we call expect() 
+expect(our_case).toBe(case_should_come).
+our_case = component.method_inside_app.component.ts(showMessage)(passing the variable if needed)
+
+if we want simply function inside the file , export the function if it's class is not exported
+
+export function Addition(number1: number, number2: number): number {
+  return number1 + number2;
+}
+
+it('addition method', () => {
+    expect(Addition(10, 20)).toBe(30);
+});
+
+6. exclude the angular unit test cases form execution.
+

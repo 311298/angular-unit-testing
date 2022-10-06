@@ -2,7 +2,12 @@ import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
+// import from other files
+import { Addition } from './ts-file-4-testing/calulator';
+
 describe('AppComponent', () => {
+  let component = new AppComponent();
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule],
@@ -30,5 +35,13 @@ describe('AppComponent', () => {
   // });
   it('my test case', () => {
     expect(true).toBe(true);
+  });
+
+  it('show alert message', () => {
+    expect(component.showMessage('hello')).toBe('hello');
+  });
+
+  it('addition method', () => {
+    expect(Addition(10, 20)).toBe(30);
   });
 });
