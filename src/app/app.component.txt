@@ -73,3 +73,10 @@ to exclude the unit test case we can simply prefix the 'x' before the it functio
 xit('',()=>{}) -- this will not run and show the status of pending spec
 
 and same can be done for the describe also if we make it xdescribe()
+
+7. jasmine matchers
+
+there are 2 types of matcher in-built and custom matchers
+matcher are the js function that does a boolean comparision between actual output and expected output
+
+customer matcher need to be define explicitly
