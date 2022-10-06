@@ -33,7 +33,7 @@ describe('AppComponent', () => {
   //   const compiled = fixture.nativeElement as HTMLElement;
   //   expect(compiled.querySelector('.content span')?.textContent).toContain('unit-testing app is running!');
   // });
-  it('my test case', () => {
+  xit('my test case', () => {
     expect(true).toBe(true);
   });
 

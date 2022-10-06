@@ -69,3 +69,7 @@ it('addition method', () => {
 
 6. exclude the angular unit test cases form execution.
 
+to exclude the unit test case we can simply prefix the 'x' before the it function like below --
+xit('',()=>{}) -- this will not run and show the status of pending spec
+
+and same can be done for the describe also if we make it xdescribe()
