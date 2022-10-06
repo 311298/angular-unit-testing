@@ -86,3 +86,12 @@ customer matcher need to be define explicitly
 for primitive data types we will use the toBe like in case of string, numbers, and boolean while toEqual used for everything else.
 
 generally( toEqual ) use it for object comparision
+
+9. toBe(true), toBeTrue(), toBeTruthy(), toBe(false), toBeFalse(), toBeFalsy()
+
+toBe(true) -- handle only primitive boolean type
+toBeTrue() -- handles both primitive boolean type and boolean object
+only difference I found is in 1 we pass the argument and the other we don't 
+same goes for toBeFalse()
+anything that is not truthy is falsy
+expect(undefined).toBeFalse(); // this test case will false as toBeFalse() only check for false
