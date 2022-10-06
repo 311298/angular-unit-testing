@@ -1,0 +1,14 @@
+notes
+
+https://www.youtube.com/playlist?list=PL5Agzt13Z4g_D7RjXZN8h3nR_Gpf-rcjJ
+                - by the dot net office (youtube)
+
+=====================================================================
+
+1. introduction to jasmine and karma
+
+jasime is bdd(behavious driven development)
+it is tesing framework for angular for unit testing
+karma is open source automation testing tool
+
+2. flow of angular unit test case
