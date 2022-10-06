@@ -95,3 +95,17 @@ only difference I found is in 1 we pass the argument and the other we don't
 same goes for toBeFalse()
 anything that is not truthy is falsy
 expect(undefined).toBeFalse(); // this test case will false as toBeFalse() only check for false
+
+10. toBeGreaterThan() ,toBeGreaterThanOrEqual() ,toBeLessThan() ,toBeLessThanOrEqual() 
+
+toBeGreaterThan() ,toBeGreaterThanOrEqual() -- both are comparision function that evaluates to be true or false
+
+same goes for other also. it is as the function name suggests
+
+11. toMatch() and toBeCloseTo() Jasmin Matcher
+
+toMatch() -- should be applied to regular expression
+we can also use the .not().toMatch() -- for opposite scenario
+
+toBeCloseTo() -- should be used when we want to check the precision of the number
+for example the pi value or exponential constant value
