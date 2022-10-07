@@ -175,3 +175,21 @@ SpyOn can call the original method using .and,callThrough()
 example in student.component.spec.ts 
 
 19. Change detection in angular unit test
+
+change Detection backbone of angular framework
+change detection means updating the view whenever data changed
+
+suppose we make a button where html value is changing on click to mimic it
+first 
+let h4: HTMLElement;
+second
+h4 = fixture.nativeElement.querySelector('h4');
+third
+it('verify the h4 element value', () => {
+    component.studentSchoolResult();
+    fixture.detectChanges();
+    // expect(h4.textContent).toBe(component.studentResult); //both passes
+    expect(h4.textContent).toBe('Fail');
+});
+
+20. Debug Element & DOM events in angular unit test

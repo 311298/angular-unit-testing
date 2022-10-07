@@ -9,6 +9,7 @@ import { StudentService } from './student.service'; // service import
 describe('StudentComponent', () => {
   let component: StudentComponent;
   let fixture: ComponentFixture<StudentComponent>; // instance of css html and ts file, basically allows us to access anything related to that component
+  let h4: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -22,6 +23,7 @@ describe('StudentComponent', () => {
     fixture = TestBed.createComponent(StudentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    h4 = fixture.nativeElement.querySelector('h4');
   });
 
   it('should create', () => {
@@ -38,7 +40,7 @@ describe('StudentComponent', () => {
   it('spyOn method 2', () => {
     // use to mock the particular method
     spyOn(component, 'calculate').and.returnValues(40, 20); // it disregards the value provided and pass own value form here
-    let result = component.studentResult();
+    let result = component.studentSchoolResult();
     expect(result).toEqual('Pass');
   });
 
@@ -55,5 +57,12 @@ describe('StudentComponent', () => {
     expect(component.result).toEqual({
       result: 200,
     });
+  });
+
+  it('verify the h4 element value', () => {
+    component.studentSchoolResult();
+    fixture.detectChanges();
+    // expect(h4.textContent).toBe(component.studentResult); //both passes
+    expect(h4.textContent).toBe('Fail');
   });
 });

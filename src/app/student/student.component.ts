@@ -9,6 +9,7 @@ import { StudentService } from './student.service';
 export class StudentComponent implements OnInit {
   sum: number = 0;
   result: any | undefined;
+  studentResult!: string;
 
   constructor(private service: StudentService) {}
 
@@ -33,11 +34,13 @@ export class StudentComponent implements OnInit {
     });
   }
 
-  studentResult() {
+  studentSchoolResult() {
     if (this.calculate(10, 20) >= 40) {
-      return 'Pass';
+      this.studentResult = 'Pass';
+      return this.studentResult;
     } else {
-      return 'Fail';
+      this.studentResult = 'Fail';
+      return this.studentResult;
     }
   }
 
