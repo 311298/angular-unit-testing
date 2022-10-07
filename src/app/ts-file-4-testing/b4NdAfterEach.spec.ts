@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from '../app.component';
 
-describe('b4 and after each', () => {
+xdescribe('b4 and after each', () => {
   //   let component = new AppComponent();
   let component: AppComponent;
   beforeEach(async () => {

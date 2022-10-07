@@ -161,3 +161,17 @@ testBed -- help us test cases as by providing the correct dependency and metadat
 like directive,component,Dependency Injection, allows NgModule configuration
 
 fixture is the instance of css html and ts file, basically allows us to access anything related to that component, for example checking the native Elements of the html body
+
+created the student component
+
+18. SpyOn to mock and Stub methods
+
+SpyOn is the angular method help us to mock the execution of angular method
+it is easy way to check whether that method is called or not called
+we can also get the dummy data from the SpyOn
+SpyOn can call the original method using .and,callThrough() 
+
+// basically spyOn method is when a method inside the component(object) is used inside the other methods we will use it
+example in student.component.spec.ts 
+
+19. Change detection in angular unit test

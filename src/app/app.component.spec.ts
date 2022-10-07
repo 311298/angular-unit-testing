@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 // import from other files
 import { Addition } from './ts-file-4-testing/calulator';
 
-describe('1AppComponent', () => {
+xdescribe('1AppComponent', () => {
   let component = new AppComponent();
 
   beforeEach(async () => {
