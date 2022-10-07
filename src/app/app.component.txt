@@ -149,4 +149,15 @@ AfterAll -- execute once after all the test cases
 
 you can simply check it with the help of console.log('...............')
 
-16.
+16. Arrange-Act-Assert(AAA) Pattern
+
+Arrange -- does the test case need any instance or data etc
+Act -- call the method to perform the operation on the input, instance etc
+Assert -- expect the correct behaviour of method or operation with input or instance 
+
+17. TestBed and Component Fixture
+
+testBed -- help us test cases as by providing the correct dependency and metadata
+like directive,component,Dependency Injection, allows NgModule configuration
+
+fixture is the instance of css html and ts file, basically allows us to access anything related to that component, for example checking the native Elements of the html body
