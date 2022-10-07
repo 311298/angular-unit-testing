@@ -10,6 +10,7 @@ export class StudentComponent implements OnInit {
   sum: number = 0;
   result: any | undefined;
   studentResult!: string;
+  countNumber: number = 0;
 
   constructor(private service: StudentService) {}
 
@@ -46,5 +47,12 @@ export class StudentComponent implements OnInit {
 
   saveDataIntoConsole(info: object) {
     console.log(info);
+  }
+
+  increaseNumber() {
+    this.countNumber += 1;
+  }
+  decreaseNumber() {
+    this.countNumber -= 1;
   }
 }

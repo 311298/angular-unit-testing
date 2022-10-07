@@ -1,5 +1,24 @@
 <p>student works!</p>
 
-<button (click)="studentSchoolResult()">get result</button>
+<button id="getResult" (click)="studentSchoolResult()">get result</button>
 
 <h4>{{ studentResult }}</h4>
+
+<hr />
+
+<button
+  id="btnincreaseNumber"
+  (click)="increaseNumber()"
+  class="btn btn-primary"
+>
+  increase number
+</button>
+<button
+  id="btndecreaseNumber"
+  (click)="decreaseNumber()"
+  class="btn btn-primary"
+>
+  decrease number
+</button>
+
+<h5>{{ countNumber }}</h5>

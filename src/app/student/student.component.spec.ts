@@ -1,5 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
+import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { of } from 'rxjs';
 import { AppRoutingModule } from '../app-routing.module';
 
@@ -10,6 +12,7 @@ describe('StudentComponent', () => {
   let component: StudentComponent;
   let fixture: ComponentFixture<StudentComponent>; // instance of css html and ts file, basically allows us to access anything related to that component
   let h4: HTMLElement;
+  let debug: DebugElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -24,6 +27,7 @@ describe('StudentComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
     h4 = fixture.nativeElement.querySelector('h4');
+    debug = fixture.debugElement;
   });
 
   it('should create', () => {
@@ -64,5 +68,14 @@ describe('StudentComponent', () => {
     fixture.detectChanges();
     // expect(h4.textContent).toBe(component.studentResult); //both passes
     expect(h4.textContent).toBe('Fail');
+  });
+
+  it('increase count click', () => {
+    const h5 = debug.query(By.css('h5'));
+    const button = debug.query(By.css('#btnincreaseNumber'));
+    // to check whether button is click or not clicked
+    button.triggerEventHandler('click', {});
+    fixture.detectChanges();
+    expect(component.countNumber).toEqual(parseInt(h5.nativeElement.innerText));
   });
 });

@@ -193,3 +193,8 @@ it('verify the h4 element value', () => {
 });
 
 20. Debug Element & DOM events in angular unit test
+
+'increase count click' -- test case
+here we created the button which changes the value we check it using the debugelement and replicate the scenario inside the spec file
+let debug : debugelement
+debug=fixture.debugelement
