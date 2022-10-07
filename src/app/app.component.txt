@@ -144,3 +144,9 @@ therefore inside the afterEach() --     TestBed.resetTestingModule(); is needed
 
 15. BeforeAll and AfterAll in Jasmin Method 
 
+BeforeAll -- execute once before all the test cases
+AfterAll -- execute once after all the test cases
+
+you can simply check it with the help of console.log('...............')
+
+16.
