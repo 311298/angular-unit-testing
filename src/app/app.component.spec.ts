@@ -69,4 +69,15 @@ describe('1AppComponent', () => {
     expect(undefined).toBeFalsy(); // anything that is not truthy is falsy
     // expect(undefined).toBeFalse(); // this test case will false as toBeFalse() only check for false
   });
+
+  it('10toBeDefined()', () => {
+    var myObj = { foo: 'foo' };
+    var myFunc = (function () {})();
+    var strUndefined;
+    expect(myObj).toBeDefined();
+    expect(myObj.foo).toBeDefined();
+    expect(myFunc).not.toBeDefined(); // undefined
+    expect(myFunc).toBeUndefined();
+    expect(strUndefined).toBeUndefined();
+  });
 });

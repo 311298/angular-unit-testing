@@ -109,3 +109,10 @@ we can also use the .not().toMatch() -- for opposite scenario
 
 toBeCloseTo() -- should be used when we want to check the precision of the number
 for example the pi value or exponential constant value
+
+12. toBeDefined and toBeUndefined Jasmine matcher 
+
+toBeDefined() matcher must be use when we do comparision against defined 
+
+I have written the few defined and undefined cases with few examples in test cases
+ 
