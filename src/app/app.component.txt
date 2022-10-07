@@ -122,3 +122,25 @@ tobenull -- matcher must be assigned to when comparision agaist null
 toBeNaN -- matcher should be applied successfully for finding undertimed value
 toBePositiveInfinity -- for positive infinity (1/0)
 toBeNegativeInfinity -- for negative infinity (-1/0)
+
+13. beforeEach and afterEach
+
+beforeEach -- before each test case beforeEach will run inside the describe
+afterEach -- after every test case afterEachw will run inside the describe
+
+see the example inside the b4NdAfterEach.spec.ts
+
+It is not suited to create instance of component inside the each test cases. Therefore, we define the component first inside the describe method, simply --
+    let component : AppComponent
+after the inside the beforeEach we create an instance of component --
+    component = new AppComponent()
+by doing this 2 above case, our component instance is created before each test case.
+
+inside the afterEach() method we will destroy the testbed for each test case it will alter the true nature of method, for example
+
+we adding 2 to a number -- expect should be number + 2
+then in another test case we substract 2 from it -- expect should be number -2, but rather it will be number (since number +2 -2 === number)
+therefore inside the afterEach() --     TestBed.resetTestingModule(); is needed
+
+15. BeforeAll and AfterAll in Jasmin Method 
+

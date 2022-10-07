@@ -7,8 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'unit-testing';
+  count: number = 10;
 
   showMessage(message: string): string {
     return message;
+  }
+
+  increaseCount(number: number) {
+    this.count += number;
+  }
+  decreaseCount(number: number) {
+    this.count -= number;
   }
 }
