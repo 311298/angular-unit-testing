@@ -80,4 +80,18 @@ describe('1AppComponent', () => {
     expect(myFunc).toBeUndefined();
     expect(strUndefined).toBeUndefined();
   });
+
+  it('11 rest jasmine matchers', () => {
+    var nullValue = null;
+    expect(nullValue).toBeNull(); // same as before we can use the not also here
+    const myArray = ['jasmine', 'thedotnetoffice', 'tutorials'];
+    expect(myArray).toContain('jasmine');
+    expect(myArray).not.toContain('jasmine1');
+    expect(0 / 0).toBeNaN();
+    expect(0 / 5).not.toBeNaN();
+    expect(1 / 0).toBePositiveInfinity();
+    expect(-1 / 0).not.toBePositiveInfinity();
+    expect(-1 / 0).toBeNegativeInfinity();
+    expect(1 / 0).not.toBeNegativeInfinity();
+  });
 });

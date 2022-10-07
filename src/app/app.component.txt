@@ -115,4 +115,10 @@ for example the pi value or exponential constant value
 toBeDefined() matcher must be use when we do comparision against defined 
 
 I have written the few defined and undefined cases with few examples in test cases
- 
+
+12. tobenull() ,tocontain() ,tobeNan() , toBePositiveInfinity, toBeNegetiveInfinity 
+
+tobenull -- matcher must be assigned to when comparision agaist null
+toBeNaN -- matcher should be applied successfully for finding undertimed value
+toBePositiveInfinity -- for positive infinity (1/0)
+toBeNegativeInfinity -- for negative infinity (-1/0)
