@@ -198,3 +198,41 @@ it('verify the h4 element value', () => {
 here we created the button which changes the value we check it using the debugelement and replicate the scenario inside the spec file
 let debug : debugelement
 debug=fixture.debugelement
+
+21. private method and private property
+
+component['name']() // for method
+to access the private property simple component['propertyName']
+
+22. spyOn on private method
+
+inside the it --
+let spyName = spyOn<any>(component,'methodName') //any help us to spyOn private method
+component['methodName']()
+expect(spyName).tohavebeencalled()
+
+23. unit testing on interpolation
+
+inside the it --
+const name:HTMLElement=fixture.nativeElement.querySelector('#id')
+way of getting the html element inside the spec file
+
+expect(name.innerHtml).toEqual(component.name)
+
+suppose we make changes inside spec the property
+component.name = "updated name"
+fixture.detectChanges()
+expect(name.innerHtml).toEqual(component.name)
+
+
+24. Unit test on property binding
+
+inside the it --
+const inputVal:HTMLElement=fixture.nativeElement.querySelector('#id)
+here we take the html element
+expect(inputVal.properyBindingName).toBe('desired result')
+
+25. ngClass and ngStyle
+ skip
+
+33. dependency Injection
